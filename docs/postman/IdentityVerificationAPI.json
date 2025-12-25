@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "fd520b31-1fd4-4725-b74e-a20e4a019ecb",
+		"name": "Basic Demo CRUD collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20015409"
+	},
+	"item": [
+		{
+			"name": "POST Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Jack\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"jack.doe@test.com\",\r\n  \"phone\": \"+385912345678\",\r\n  \"dateOfBirth\": \"1990-01-01\",\r\n  \"country\": \"Croatia\",\r\n  \"password\": \"secret1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customers/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST KYC",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Jack\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"jack.doe@test.com\",\r\n  \"phone\": \"+385912345678\",\r\n  \"dateOfBirth\": \"1990-01-01\",\r\n  \"country\": \"Croatia\",\r\n  \"password\": \"secret1234\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/kyc/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"kyc",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET KYC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/kyc/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"kyc",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
