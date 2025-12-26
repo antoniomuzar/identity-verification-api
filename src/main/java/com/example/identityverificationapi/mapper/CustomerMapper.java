@@ -3,6 +3,7 @@ package com.example.identityverificationapi.mapper;
 import com.example.identityverificationapi.dto.CustomerCreateRequest;
 import com.example.identityverificationapi.dto.CustomerResponse;
 import com.example.identityverificationapi.model.Customer;
+import com.example.identityverificationapi.model.Role;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
@@ -19,6 +20,7 @@ public class CustomerMapper {
                 .dateOfBirth(dto.getDateOfBirth())
                 .country(dto.getCountry())
                 .passwordHash(dto.getPassword())
+                .role(Role.ROLE_CUSTOMER)
                 .createdAt(Instant.now())
                 .build();
     }

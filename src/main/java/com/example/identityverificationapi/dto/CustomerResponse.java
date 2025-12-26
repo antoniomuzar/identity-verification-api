@@ -1,6 +1,5 @@
 package com.example.identityverificationapi.dto;
 
-import com.example.identityverificationapi.model.KycStatus;
 import lombok.Builder;
 import lombok.Data;
 

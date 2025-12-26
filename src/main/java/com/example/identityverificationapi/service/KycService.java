@@ -45,4 +45,18 @@ public class KycService {
         }
         return customer.getKycRequest();
     }
+
+    public KycRequest updateStatus(Long customerId, KycStatus status) {
+        Customer customer = customerRepository.findById(customerId)
+                .orElseThrow(() -> new NotFoundException("Customer not found with id: " + customerId));
+
+        KycRequest kyc = customer.getKycRequest();
+        if (kyc == null) {
+            throw new BadRequestException("KYC not started");
+        }
+
+        kyc.setStatus(status);
+        kyc.setUpdatedAt(Instant.now());
+        return kycRepository.save(kyc);
+    }
 }
